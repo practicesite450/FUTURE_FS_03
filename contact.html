@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nestlé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .nestle-blue-bg { background-color: #00495e; }
+        .text-nestle-blue { color: #00495e; }
+        .accent-orange { background-color: #ff7e39; }
+        
+        /* Form Input Styling */
+        .form-input {
+            background-color: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 12px 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #ff7e39;
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(255, 126, 57, 0.1);
+        }
+
+        /* FAQ Accordion Transition */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust based on content */
+            padding-bottom: 20px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="header-placeholder"></div>
+
+    <section class="py-16 px-6 md:px-20 lg:px-32">
+        <div class="max-w-6xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row" data-aos="zoom-in">
+            
+            <div class="lg:w-2/5 nestle-blue-bg p-12 text-white relative">
+                <h2 class="text-4xl font-extrabold mb-10">Get in Touch</h2>
+                
+                <div class="space-y-8 relative z-10">
+                    <div class="flex items-start gap-4">
+                        <span class="text-orange-400 text-xl mt-1">✉</span>
+                        <div>
+                            <p class="text-sm opacity-60 uppercase font-bold tracking-widest">Email</p>
+                            <p class="text-lg font-semibold">support@nestle.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <span class="text-orange-400 text-xl mt-1">📞</span>
+                        <div>
+                            <p class="text-sm opacity-60 uppercase font-bold tracking-widest">Phone</p>
+                            <p class="text-lg font-semibold">1-800-NESTLE (637-8531)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <span class="text-orange-400 text-xl mt-1">📍</span>
+                        <div>
+                            <p class="text-sm opacity-60 uppercase font-bold tracking-widest">Address</p>
+                            <p class="text-lg font-semibold">Avenue Nestlé 55<br>1800 Vevey, Switzerland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <p class="text-sm opacity-60 mb-4 uppercase font-bold">Follow Us</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-500 transition">f</a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-500 transition">ig</a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-500 transition">𝕏</a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-500 transition">in</a>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[-50px] right-[-50px] w-64 h-64 bg-white/5 rounded-full"></div>
+            </div>
+
+            <div class="lg:w-3/5 p-12">
+                <h3 class="text-3xl font-extrabold text-nestle-blue mb-8">Send Us a Message</h3>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="form-input">
+                    <input type="email" placeholder="Email Address" class="form-input">
+                    <input type="tel" placeholder="Phone Number" class="form-input">
+                    
+                    <select class="form-input appearance-none">
+                        <option>Select Subject</option>
+                        <option>Product Feedback</option>
+                        <option>Sustainability Inquiry</option>
+                        <option>Media & Press</option>
+                        <option>Careers</option>
+                    </select>
+
+                    <div class="relative">
+                        <textarea placeholder="Your Message (max 500 characters)" rows="5" class="form-input resize-none"></textarea>
+                        <span class="absolute bottom-3 right-3 text-xs text-gray-400">0/500 characters</span>
+                    </div>
+
+                    <button type="submit" class="w-full accent-orange text-white font-bold py-4 rounded-xl shadow-lg hover:bg-orange-600 transform hover:-translate-y-1 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-20 lg:px-32 bg-[#eeede8]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-5xl font-extrabold text-nestle-blue mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-500">Find answers to common questions about Nestlé products and services</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-bold text-nestle-blue">Where can I buy Nestlé products?</span>
+                        <span class="faq-icon text-orange-500 transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-8 text-gray-600">
+                        Our products are available in major supermarkets, convenience stores, and online retailers globally. You can also use our Store Locator on the homepage.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-bold text-nestle-blue">How can I contact customer service?</span>
+                        <span class="faq-icon text-orange-500 transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-8 text-gray-600">
+                        You can reach us via the contact form above, call our toll-free number at 1-800-NESTLE, or email us directly at support@nestle.com.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-bold text-nestle-blue">Does Nestlé offer nutritional information?</span>
+                        <span class="faq-icon text-orange-500 transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-8 text-gray-600">
+                        Yes, nutritional details are printed on all our packaging. You can also find detailed nutritional breakdowns for every product in the 'Products' section of our website.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-bold text-nestle-blue">What is Nestlé doing for sustainability?</span>
+                        <span class="faq-icon text-orange-500 transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-8 text-gray-600">
+                        We are committed to achieving net-zero emissions by 2050, moving to 100% recyclable packaging by 2025, and supporting regenerative agriculture worldwide.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <button class="w-full px-8 py-6 flex justify-between items-center text-left" onclick="toggleFAQ(this)">
+                        <span class="text-lg font-bold text-nestle-blue">Does Nestlé have career opportunities?</span>
+                        <span class="faq-icon text-orange-500 transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer px-8 text-gray-600">
+                        Yes! We are always looking for talent. Please visit our global Careers portal to view open positions in nutrition, engineering, marketing, and more.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // FAQ Toggle Logic
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            
+            // Close other items (optional - remove if you want multiple open)
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
+    <script src="header-footer.js"></script>
+</body>
+</html>

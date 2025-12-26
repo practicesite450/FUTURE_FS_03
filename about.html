@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nestlé Redesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f3ef; scroll-behavior: smooth; }
+        .nestle-blue-text { color: #00495e; }
+        
+        /* Hero Styling with Parallax */
+        .about-hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                        url('images/building.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax Effect */
+        }
+
+        /* Timeline Circles */
+        .timeline-dot {
+            width: 45px;
+            height: 45px;
+            background-color: #00495e;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        /* Journey Card Styling */
+        .journey-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-height: 180px;
+        }
+        .journey-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Mission & Vision Cards */
+        .mission-card {
+            background-color: #00495e;
+            color: white;
+            border-radius: 40px;
+            padding: 60px;
+            transition: transform 0.4s ease;
+        }
+        .mission-card:hover { transform: scale(1.02); }
+
+        .vision-card {
+            background-color: white;
+            color: #00495e;
+            border-radius: 40px;
+            padding: 60px;
+            border: 2px solid #00495e;
+            position: relative;
+            transition: transform 0.4s ease;
+        }
+        .vision-card:hover { transform: scale(1.02); }
+
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(#00495e 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="header-placeholder"></div>
+
+    <section class="about-hero-bg h-[80vh] w-full flex items-center justify-center text-center relative">
+        <div class="relative z-10 text-white px-6 flex flex-col items-center">
+            <img src="images/logo.png" class="h-28 md:h-36 mb-10 brightness-0 invert drop-shadow-2xl" alt="Nestle Logo" data-aos="zoom-in">
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight max-w-5xl tracking-tight" data-aos="fade-up" data-aos-delay="200">
+                Enhancing quality of life and <br class="hidden md:block"> contributing to a healthier future
+            </h1>
+            
+            <div class="absolute bottom-[-100px] animate-bounce">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#f5f3ef] px-12">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-5xl font-extrabold nestle-blue-text mb-4">Our Journey</h2>
+            <p class="text-gray-500 font-medium">Over 150 years of nourishing families and building trust worldwide</p>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto">
+            <div class="absolute top-[22px] left-0 w-full h-[3px] bg-gray-300 hidden md:block"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot">66</div>
+                    <div class="journey-card">
+                        <h4 class="text-2xl font-black text-orange-500 mb-3">1866</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Founded by Henri Nestlé in Vevey, Switzerland</p>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot">05</div>
+                    <div class="journey-card">
+                        <h4 class="text-2xl font-black text-orange-500 mb-3">1905</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Merged with Anglo-Swiss Condensed Milk Company</p>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot">38</div>
+                    <div class="journey-card">
+                        <h4 class="text-2xl font-black text-orange-500 mb-3">1938</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Launched NESCAFÉ instant coffee</p>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot">74</div>
+                    <div class="journey-card">
+                        <h4 class="text-2xl font-black text-orange-500 mb-3">1974</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Acquired majority stake in L'Oréal</p>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-up" data-aos-delay="500">
+                    <div class="timeline-dot">25</div>
+                    <div class="journey-card">
+                        <h4 class="text-2xl font-black text-orange-500 mb-3">2025</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Leading global nutrition and wellness company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-12 md:px-24 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
+            <div class="mission-card" data-aos="fade-right">
+                <div class="text-orange-500 mb-6">
+                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                </div>
+                <h2 class="text-4xl font-extrabold mb-8">Our Mission</h2>
+                <p class="text-lg opacity-80 leading-relaxed">
+                    To unlock the power of food to enhance quality of life for everyone, today and for generations to come. We strive to be a leading Nutrition, Health and Wellness company.
+                </p>
+            </div>
+            <div class="vision-card" data-aos="fade-left">
+                <div class="text-orange-500 mb-6 relative z-10">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                </div>
+                <h2 class="text-4xl font-extrabold mb-8 relative z-10">Our Vision</h2>
+                <p class="text-lg opacity-80 leading-relaxed relative z-10">
+                    We aspire to be a force for good, recognized for our commitment to sustainability and nutrition. Our vision is to help shape a better world, inspiring healthier lives.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#f5f3ef] px-12 text-center overflow-hidden">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-extrabold nestle-blue-text mb-2">Nestlé Worldwide</h2>
+            <p class="text-gray-500 mb-12">A truly global company with a presence in nearly every country</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto bg-white rounded-[40px] p-10 shadow-sm mb-16" data-aos="zoom-in">
+            <img src="images/mapping.png" class="w-full opacity-30" alt="World Map">
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <span class="text-5xl font-black nestle-blue-text">186</span>
+                <p class="text-gray-400 font-bold uppercase text-xs mt-2">Countries</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <span class="text-5xl font-black nestle-blue-text">2000+</span>
+                <p class="text-gray-400 font-bold uppercase text-xs mt-2">Brands</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <span class="text-5xl font-black nestle-blue-text">273k</span>
+                <p class="text-gray-400 font-bold uppercase text-xs mt-2">Employees</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <span class="text-5xl font-black nestle-blue-text">339</span>
+                <p class="text-gray-400 font-bold uppercase text-xs mt-2">Factories</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 150
+        });
+    </script>
+    <script src="header-footer.js"></script>
+</body>
+</html>

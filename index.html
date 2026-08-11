@@ -56,6 +56,12 @@
         .universe-card:hover { transform: scale(0.98); }
         .universe-card img { transition: all 0.6s ease; }
         .universe-card:hover img { transform: scale(1.15) rotate(5deg); }
+
+        /* Services Card Hover */
+        .service-card { transition: all 0.4s ease; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,73,94,0.12); }
+        .service-card img { transition: transform 0.5s ease; }
+        .service-card:hover img { transform: scale(1.05); }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -166,6 +172,46 @@
                 <div class="text-5xl mb-4 transform group-hover:scale-125 transition">🔬</div>
                 <h4 class="font-bold nestle-blue-text text-lg">Research</h4>
                 <p class="text-gray-400 text-xs mt-2 font-bold uppercase tracking-wider">Nutrition Science</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-12 md:px-24 bg-[#f4f1ea]">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="inline-block bg-[#00495e] text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">What We Offer</div>
+            <h2 class="text-5xl font-extrabold nestle-blue-text">Our Services</h2>
+            <p class="text-gray-500 mt-3 font-medium max-w-xl mx-auto">Expert solutions to help businesses and communities thrive with better nutrition</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="service-card bg-white rounded-3xl overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-56 overflow-hidden bg-[#eff6f9]">
+                    <img src="images/service1.png" alt="Nestlé Professional" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold nestle-blue-text mb-3">Nestlé Professional</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        Comprehensive food and beverage solutions tailored for businesses — from cafés and restaurants to hotels and catering. We deliver quality ingredients, menu innovation, and operational support to help your business succeed.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[#ff7e39] font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all">
+                        Learn More <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-3xl overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-56 overflow-hidden bg-[#fef0f4]">
+                    <img src="images/service2.png" alt="Nutrition & Health Services" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold nestle-blue-text mb-3">Nutrition & Health Services</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        Expert nutritional guidance and rigorous quality assurance backed by decades of scientific research. We help organizations and individuals make informed choices for healthier, more balanced lifestyles.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[#ff7e39] font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all">
+                        Learn More <span>&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
